@@ -1,9 +1,9 @@
 name: OpenShift 
 
 env: 
-  IMAGE_REGISTRY: ghcr.io/${{ github.repository_owner }}
-  REGISTRY_USER: ${{ github.actor }}
-  REGISTRY_PASSWORD: ${{ github.token }}
+  IMAGE_REGISTRY: ${{ secrets.IMAGE_REGISTRY }}
+  REGISTRY_USER: ${{ secrets.REGISTRY_USER }}
+  REGISTRY_PASSWORD: ${{ secrets.REGISTRY_PASSWORD }}
   APP_NAME: nationalparks
   IMAGE_TAGS: latest ${{ github.sha }}
 
